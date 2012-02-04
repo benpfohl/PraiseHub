@@ -21,7 +21,7 @@ Installed latest Rails (3.2):
 Installed nginx:
 (http://wiki.nginx.org/Install)
 
-- logged in as root (sudo -s)
+- Logged in as root (sudo -s)
 - nginx=stable
 - add-apt-repository ppa:nginx/$nginx
 - wget http://nginx.org/packages/keys/nginx_signing.key
@@ -39,7 +39,7 @@ Installed phusion passenger (3.0.11):
 - sudo gem install passenger
 - sudo apt-get install libcurl4-openssl-dev
 - sudo passenger-install-nginx-module
-   . choose option 1 to install nginx with passenger (with defaults)
+   . Choose option 1 to install nginx with passenger (with defaults)
 - Example block to add rails app to nginx conf file:
    server {
       listen 80;
@@ -47,4 +47,19 @@ Installed phusion passenger (3.0.11):
       root /somewhere/public;   # <--- be sure to point to 'public'!
       passenger_enabled on;
    }
+
+Installed gems (mysql, bundler, etc):
+- sudo get install bundler       <-- Already installed, but just in case we need id.
+- sudo gem install mysql         <-- We use MySQL instead of the default sqlite3.
+- sudo gem install therubyracer  <-- Necessary because ruby needs a JavaScript runtime (execjs).
+
+Created new rails app:
+- cd PraiseHub/src
+- rails new praisehub
+   . This will probably fail when running bundle because sqlite3 is not installed.
+- cd praisehub
+- Edited GemFile:
+   . Replaced gem 'sqlite3' with gem 'mysql'
+   . Added gem 'therubyracer'
+- bundle install
 
