@@ -1,0 +1,50 @@
+=================================================
+Some notes on Ruby on Rails setup on Ubuntu 10.4:
+=================================================
+(http://rubyonrails.org/download)
+
+Installed latest ruby (1.9.3):
+- ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p0.tar.gz
+- Expanded under ./apps; cd ./apps/ruby-1.9.3-p0
+- ./configure
+- make
+- sudo make install
+
+Installed latest RubyGems (1.8.15):
+(http://docs.rubygems.org/)
+
+- sudo gem update --system
+
+Installed latest Rails (3.2):
+- sudo gem install rails
+
+Installed nginx:
+(http://wiki.nginx.org/Install)
+
+- logged in as root (sudo -s)
+- nginx=stable
+- add-apt-repository ppa:nginx/$nginx
+- wget http://nginx.org/packages/keys/nginx_signing.key
+- cat nginx_signing.key | apt-key add -
+- apt-get update
+- apt-get install nginx
+
+Disabled apache (no start at boot since it conflicts with nginx):
+- sudo update-rc.d -f apache2 remove
+
+Started nginx (it should start at boot):
+- sudo /etc/init.d/nginx start
+
+Installed phusion passenger (3.0.11):
+- sudo gem install passenger
+- sudo apt-get install libcurl4-openssl-dev
+- sudo passenger-install-nginx-module
+   . choose option 1 to install nginx with passenger (with defaults)
+- Example block to add rails app to nginx conf file:
+   server {
+      listen 80;
+      server_name www.yourhost.com;
+      root /somewhere/public;   # <--- be sure to point to 'public'!
+      passenger_enabled on;
+   }
+
