@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PraiseHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard | PraiseHub</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 <link rel="stylesheet" type="text/css" href="css/app.css">
@@ -25,27 +26,33 @@
               </a>
          
               <!-- Be sure to leave the brand out there if you want it shown -->
-              <a class="brand" href="#">PraiseHub</a>
+              <a class="brand" href="#">My Church Name</a>
          
               <!-- Everything you want hidden at 940px or less, place within here -->
               <div class="nav-collapse collapse">
                 <!-- .nav, .navbar-search, .navbar-form, etc -->                
                 <ul class="nav">
                     <li class="active">
-                        <a href="#">Dashboard</a>
+                        <a href="dashboard.html"><i class="icon-tasks icon-white"></i> Dashboard</a>
                     </li>
-                    <li><a href="#">My Schedule</a></li>
-                    <li><a href="#">Calendar</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-calendar icon-white"></i> Events <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">App Config</a></li>
-                            <li><a href="#">Groups</a></li>
-                            <li><a href="#">Emails</a></li>
-                            <li><a href="#">Team Positions</a></li>
+                            <li><a href="all_events.html">All Events</a></li>
+                            <li><a href="my_events.html">My Events</a></li>
+                            <li class="divider"></li>
+                            <li><a href="new_event.html"><i class="icon-plus"></i> Create a New Event</a></li>
                         </ul>
                     </li> 
-                                  
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench icon-white"></i> Admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="config.html">Config</a></li>
+                            <li><a href="groups.html">Groups</a></li>
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="positions.html">Positions</a></li>
+                        </ul>
+                    </li>                                   
                 </ul>
                 <p class="navbar-text pull-right">
                 	<a href="#"><i class="icon-user icon-white"></i> email@myemail.com</a> &nbsp;&nbsp;<a href="#"><i class="icon-off icon-white"></i> Logout</a></p>  
@@ -60,7 +67,7 @@
 <div class="container main">
 	<div class="row">
     	<!--- Left Side --->
-    	<div class="span3">
+    	<div class="span3 section">
         	<h2>My Info</h2>
             <div class="row">
             	<div class="span3">
@@ -71,7 +78,7 @@
         </div>
         
         <!--- Right Side --->
-        <div class="span8 offset1	">
+        <div class="span8 offset1 section">
         	<h2>My Upcoming Events</h2>
         	<table class="upcoming_events">
             	<!--- Start Event --->

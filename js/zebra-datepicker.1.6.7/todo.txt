@@ -1,0 +1,93 @@
+Nicky:
+Great date picker, but why is it that when I use US (m/d/y) or UK (d/m/y) date formats, the picker thinks it’s 1912? It still works, but it looks weird. :)
+
+
+Martin Luter, 2012-11-04, 08:53  |  Edit
+Excelent plugin, thank you for release. I had troubles get it to work with strict XHTML document (SYNTAX_ERR: DOM Exception 12). Easy fix is to replace named entities &laquo; &nbsp; &raquo; with numbered entities &#171; &#032; &#181; in zebra_datepicker.js (line 739 in uncomrpressed version)
+
+
+
+Hej Stefan,
+
+
+And then, I wrote a small quickfix for a statically positioned icon (that stays in postion even if the layout is changed during page lifecycle).
+To implement, follow the directions I described at http://z00l.de/zebra-datepicker-erweiterung/ (in german), or just download the updated file from
+http://z00l.de/resources/zebra_datepicker_1.5_extended.src.js and see what changes I made against version 1.5.
+
+I hope this blog posting is ok for you, I also added a link back to your site.
+
+Bye and thanks for your great plugin.
+Christian
+
+
+
+Hi Stefan,
+
+i am working on a web-site which uses responsive Web-Design techniques and CSS media queries.
+I am using two combined date-fields with your calender plug-in. Now i created some designs depending on the resolution, therefore i had to change the font-size and the width of the input field for lower ones.
+What i found out is that, when CSS resizes the site layout, the calender icons stay on their old position. When you hit F5 everything is fine, the browser calculates the icon position correct, but when you resize the browser window or change the portrait / landscape format like on the iPad the calender icon position is not updated.
+I couldn't figure it our using/binding the jQuery resize function. But i finally found a solution which worked for me:
+
+The problem was difficult because both icons are buttons without individual IDs. So for the separate CSS condition this sets the new positions correct:
+button.Zebra_DatePicker_Icon:nth-of-type(1) { top: 39px !important; left: 68px !important; }
+button.Zebra_DatePicker_Icon:nth-of-type(2) { top: 39px !important; left: 167px !important; }
+
+Hope this helps you and others asking for this.
+Although it would be great if the plug-in could update the position after window-resize or if you do the calculation of the position outside the script.
+
+Kind regards,
+Rumen
+
+
+alan colyer - just made a small update to the source to help it play nice when other jQuery events are attached to the input that zebra_datepicker is attached to.
+
+In the 1.3.2 source, line 534, I changed the line from this:
+
+$element.val(format(default_date));
+
+To this:
+
+
+$element.val(format(default_date)).trigger('change');
+
+This way any onChange events queued on the input will fire correctly with the right value. I had trouble with this because the event would fire with the previous value of the input – I’m not sure why but this fixed it for me.
+
+- The ability to set up options by mean of HTML5 data- attribute have been added. This allows to change options per input without using javascript.
+search email from yuriy@silvestrov.com
+
+
+
+add a time picker and effects like http://demos.telerik.com/aspnet-mvc/razor/datepicker
+http://stefangabos.ro/jquery/zebra-datepicker/comment-page-3/#comment-1306
+
+
+
+- sa pot sa salvez data selectata in text box sau textarea
+- sa pot sa "trag" de calendar
+- Is there any way this class can pick dates and time as well as time?
+
+position .top += toInt($element.css('marginTop')) || 0; superb, in loc de $element.css('marginTop') ? $element.css('marginTop')) : 0
+parseInt sterge automat "px"
+
+
+http://www.premiumpixels.com/freebies/pretty-little-calendar-psd/
+
+
+
+
+
+I am working on a CMS and considering using Zebra Date Picker in it.
+I used a few Date Pickers but I was never satisfied …
+I tried Zebra Date Picker and it is great: simple and lightweight.
+Only one feature missing: filling the date into Selects or Split inputs
+Please, see Demo 14 of the following Date Picker:
+http://www.frequency-decoder.com/demo/date-picker-v5/
+The date picker year range is obtained from the select’s year range.
+If a date is defined in the selects then the picker uses it.
+If the date is selected in the date picker then it is filled into the selects.
+This is one of the best features I have seen in date pickers.
+Demo 12 (using 3 inputs instead of 3 selects) is also really interesting.
+Do you think it would be possible to add these features to Zebra Date Picker?
+Thank You,
+Miguel
+

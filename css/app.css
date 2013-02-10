@@ -1,9 +1,13 @@
 /* CSS Document */
+.alpha{margin-left: 0;}
 
 .main {
 	margin-top: 50px;
 	}
-	
+
+.section {
+	margin-bottom: 30px;
+	}	
 /* Upcoming events table */
 
 table.upcoming_events {
