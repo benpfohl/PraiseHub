@@ -1,0 +1,118 @@
+<header>
+	<div class="navbar navbar-fixed-top navbar-inverse">
+      	<div class="navbar-inner">
+            <div class="container">
+         
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+         
+              <!-- Be sure to leave the brand out there if you want it shown -->
+              <a class="brand" href="#">My Church Name</a>
+         
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->                
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html"><i class="icon-tasks icon-white"></i> Dashboard</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-calendar icon-white"></i> Events <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="all_events.html">All Events</a></li>
+                            <li><a href="my_events.html">My Events</a></li>
+                            <li class="divider"></li> 
+                            <!-- Should only show for admins -->
+                            <li class="active"><a href="new_event.html"><i class="icon-plus"></i> Create a New Event</a></li>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench icon-white"></i> Admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="config.html">Config</a></li>
+                            <li><a href="groups.html">Groups</a></li>
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="positions.html">Positions</a></li>
+                        </ul>
+                    </li>                                   
+                </ul>
+                <p class="navbar-text pull-right">
+                	<a href="#"><i class="icon-user icon-white"></i> email@myemail.com</a> &nbsp;&nbsp;<a href="#"><i class="icon-off icon-white"></i> Logout</a></p>  
+                  
+              </div>
+         
+            </div>
+         </div>
+    </div>
+</header>
+
+<div class="container main">
+	<div class="row">
+    	<!--- Left Side --->
+        <div class="span8">
+        	<h3>Create a New Event</h3>
+            <p>
+            	<input type="text" class="span3" placeholder="Event Name" />
+            </p>
+            <p>
+              <input type="text" class="add_date span3" placeholder="Event Date">              
+            </p>             
+            <p>              
+              <div class="input-append"><input type="text" class="start_time span1" placeholder="Start"><span class="add-on"><i class="icon-time"></i></span><input type="text" class="end_time span1 offset1" placeholder="End"><span class="add-on"><i class="icon-time"></i></span></div>
+            </p>          
+            <p>
+            	<label class="select">Recurring</label>
+                <select>
+                  <option>None</option>
+                  <option>Daily</option>
+                  <option>Weekly</option>
+                  <option>Monthly</option>
+                  <option>Yearly</option>
+                </select>
+            </p>
+            <p>
+            	<label class="select">Select a Group <br/>(Hold ctrl to select more than one)</label>
+                <select multiple="multiple">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </p>
+            <p>
+            	<label class="select">Description (Will be added to the top of the email)</label>
+            	<textarea rows="3" placeholder="Description"></textarea>
+            </p>
+            <p>
+            <label class="radio">
+              <input type="radio" name="notifications" id="notifications1" value="1" checked>
+              Don't send notifications
+            </label>
+            <label class="radio">
+              <input type="radio" name="notifications" id="onotifications2" value="2">
+              Notify all (groups)	
+            </label>
+            </p>
+            
+            <p class="alpha">
+            	<a href="#" class="btn btn-success btn-large span3 alpha">Create New Event</a>
+            </p>           
+        </div>
+    </div>
+</div>
+
+<!-- Javascripts -->
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/zebra_datepicker.js"></script>
+<script>
+$('input.add_date').Zebra_DatePicker();
+$('input.start_time').timepicker();
+$('input.end_time').timepicker();
+</script>

@@ -1,0 +1,16 @@
+    <!-- Decide where to place this (or if) -->
+    <%= devise_error_messages! %>
+
+    <div class="container">
+        <div class="form-signin">
+            <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+                <h2 class="form-signin-heading">PraiseHub</h2>
+                <%= f.email_field :email, :autofocus => true, :class => "input-block-level", :placeholder => "Email address" %>
+                <%= f.submit "Reset Password", :class => "btn btn-large btn-primary" %>
+            <% end -%>
+            
+            <p class="pull-right"><%= render "devise/shared/links" %></p>
+	</div>
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->

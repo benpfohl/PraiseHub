@@ -1,0 +1,40 @@
+/* CSS Document */
+
+body {
+        background-color: #c0c0c0;
+      }
+
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 15% auto;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+h2.form-signin-heading {
+	text-align: center;
+	padding: 30px 0 10px 15px;
+	background: url(../img/loginlogo.png) no-repeat left center;
+	}
+.form-signin .form-signin-heading
+ {
+	margin-bottom: 10px;
+	}
+.form-signin .checkbox {
+	margin-top: 12px;
+	min-width: 100px;
+	}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+

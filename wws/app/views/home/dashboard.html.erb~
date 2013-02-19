@@ -1,0 +1,122 @@
+<title>Dashboard | PraiseHub</title>
+
+<header>
+	<div class="navbar navbar-fixed-top navbar-inverse">
+      	<div class="navbar-inner">
+            <div class="container">
+         
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+         
+              <!-- Be sure to leave the brand out there if you want it shown -->
+              <a class="brand" href="#">My Church Name</a>
+         
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->                
+                <ul class="nav">
+                    <li class="active">
+                        <a href="dashboard.html"><i class="icon-tasks icon-white"></i> Dashboard</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-calendar icon-white"></i> Events <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="all_events.html">All Events</a></li>
+                            <li><a href="my_events.html">My Events</a></li>
+                            <li class="divider"></li>
+                            <li><a href="new_event.html"><i class="icon-plus"></i> Create a New Event</a></li>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench icon-white"></i> Admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="config.html">Config</a></li>
+                            <li><a href="groups.html">Groups</a></li>
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="positions.html">Positions</a></li>
+                        </ul>
+                    </li>                                   
+                </ul>
+                <p class="navbar-text pull-right">
+                	<a href="#"><i class="icon-user icon-white"></i> email@myemail.com</a> &nbsp;&nbsp;<a href="#"><i class="icon-off icon-white"></i> Logout</a></p>  
+                  
+              </div>
+         
+            </div>
+         </div>
+    </div>
+</header>
+
+<div class="container main">
+	<div class="row">
+    	<!--- Left Side --->
+    	<div class="span3 section">
+        	<h2>My Info</h2>
+            <div class="row">
+            	<div class="span3">
+                	<a href="#" class="btn btn-success btn-large btn-block">My Profile</a>
+                	<a href="#" class="btn btn-danger btn-large btn-block">Block Out Dates</a>
+                </div>
+            </div>
+        </div>
+        
+        <!--- Right Side --->
+        <div class="span8 offset1 section">
+        	<h2>My Upcoming Events</h2>
+        	<table class="upcoming_events">
+            	<!--- Start Event --->
+        		<tr>
+        			<td class="event_date">
+                    	<p class="month">feb</p>
+                        <p class="day">01</p>
+                        <p class="year">2013</p>
+                    </td>
+        			<td class="event_info">
+                    	<p class="title"><a href="#">Unity Choir Roswell Roots week</a></p>
+                        <p class="tags"><span class="label label-important">7:00pm Friday</span> <span class="label label-info">Bass</span></p>
+                    </td>
+        		</tr>
+                <!--- Start Event --->
+        		<tr>
+        			<td class="event_date">
+                    	<p class="month">feb</p>
+                        <p class="day">03</p>
+                        <p class="year">2013</p>
+                    </td>
+        			<td class="event_info">
+                    	<p class="title"><a href="#">Sunday Services</a></p>
+                        <p class="tags"><span class="label label-important">7:45 Sunday</span> <span class="label label-info">Bass</span></p>
+                    </td>
+        		</tr>
+                <!--- Start Event --->
+        		<tr>
+        			<td class="event_date">
+                    	<p class="month">feb</p>
+                        <p class="day">01</p>
+                        <p class="year">2013</p>
+                    </td>
+        			<td class="event_info">
+                    	<p class="title"><a href="#">Wed. Service (Communion)</a></p>
+                        <p class="tags"><span class="label label-important">6:00pm Wednesday</span> <span class="label label-info">Piano</span></p>
+                    </td>
+        		</tr>
+                <!--- Start Event --->
+        		<tr>
+        			<td class="event_date">
+                    	<p class="month">feb</p>
+                        <p class="day">10</p>
+                        <p class="year">2013</p>
+                    </td>
+        			<td class="event_info">
+                    	<p class="title"><a href="#">Sunday Services</a></p>
+                        <p class="tags"><span class="label label-important">7:45pm Sunday</span> <span class="label label-info">Bass</span></p>
+                    </td>
+        		</tr>
+        	</table>
+        </div>
+    </div>
+</div>

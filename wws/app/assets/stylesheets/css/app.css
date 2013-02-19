@@ -1,0 +1,51 @@
+/* CSS Document */
+.alpha{margin-left: 0;}
+
+.main {
+	margin-top: 50px;
+	}
+
+.section {
+	margin-bottom: 30px;
+	}	
+/* Upcoming events table */
+
+table.upcoming_events {
+	width: 100%;
+	}
+	
+	.upcoming_events tr:hover {background-color: #fefbd2;}
+	.upcoming_events tr td.event_date{
+		width: 80px;
+		text-align: center;
+		background-color: #3a87ad;
+		color: #ffffff;
+		padding: 10px;
+		border-bottom: 1px solid #ffffff;
+		}
+		
+		.upcoming_events tr:first-child  td.event_date{
+			background-color: #b94a48;
+			}
+		
+		.upcoming_events tr td.event_date p {padding: 0; margin: 0;}
+		.upcoming_events tr td.event_date p.month{
+			text-transform: uppercase;
+		}
+		.upcoming_events tr td.event_date p.day{
+			font-weight: bold;
+			font-size: 32px;
+		}
+		.upcoming_events tr td.event_date p.year{
+		
+		}
+	.upcoming_events tr td.event_info {
+			padding-left: 20px;
+		}
+		.upcoming_events tr td.event_info p.title {
+			font-weight: bold;
+			font-size: 24px;
+			}
+		.upcoming_events tr td.event_info p.tags {
+			
+			}
