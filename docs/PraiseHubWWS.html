@@ -1,0 +1,43 @@
+<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Notes About PraiseHub &amp; wws Rails App</title><style type="text/css">
+        
+	body {  }
+	h1 { font-size: xx-large;
+     	     font-weight: bold;
+     	     border-bottom: 1px solid black; }
+	div.note {
+		   position: relative;
+		   display: block;
+		   padding: 5pt;
+		   margin: 5pt; 
+		   white-space: -moz-pre-wrap; /* Mozilla */
+ 	      	   white-space: -pre-wrap;     /* Opera 4 - 6 */
+ 	      	   white-space: -o-pre-wrap;   /* Opera 7 */
+ 	      	   white-space: pre-wrap;      /* CSS3 */
+ 	      	   word-wrap: break-word;      /* IE 5.5+ */ }
+	</style></head><body><div class="note" id="Notes About PraiseHub &amp; wws Rails App"><a name="notes about praisehub &amp; wws rails app"></a><h1>Notes About PraiseHub &amp; wws Rails App</h1>
+These are quick notes about where and how pages and stuff is done in the wws Rails App for PraiseHub.
+
+
+<span style="font-size:large">Where Stuff Is:</span>
+
+dashboard =&gt; wws/app/views/home/dashboard.html.erb
+sign in =&gt; wws/app/views/devise/sessions/new.html.erb
+sign up =&gt; wws/app/views/devise/
+forgot password =&gt; wws/app/views/devise/passwords/new.html.erb
+reset password =&gt; wws/app/views/devise/passwords/edit.html.erb
+confirm password =&gt; wws/app/views/devise/confirmations/new.html.erb
+mailer confirmation instructions =&gt; wws/app/views/devise/mailer/confirmation_instructions.html.erb
+mailer reset password instructions =&gt; wws/app/views/devise/mailer/reset_password_instructions.html.erb
+mailer unlock instructions =&gt; wws/app/views/devise/mailer/unlock_instructions.html.erb
+
+
+<span style="font-size:large">What It Needs:</span>
+
+Ruby 1.8.7, RubyGems 1.8.15,  Rails 3.2.9, Apache2, MySQL, Passenger, etc.
+
+
+<span style="font-size:large">Restart, Start &amp; Stop:</span>
+
+touch wws/tmp/restart.txt or
+sudo service apache2 restart (or start or stop)
+</div></body></html>
